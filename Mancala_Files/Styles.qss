@@ -1,0 +1,67 @@
+* {
+    font: bold 13px Ubuntu;
+}
+
+QMainWindow, QDialog {
+    background: palette(base);
+}
+
+GameBar QPushButton {
+    border: 0;
+}
+
+Board {
+    border: 5 solid black;
+    border-radius: 35;
+    padding: 20;
+    margin: 40;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #FFCC99, stop: 1 #FFA64D
+    );
+}
+
+Pocket {
+    width: 60;
+    height: 60;
+    border: 5 solid black;
+    border-radius: 35;
+    font-size: 24px;
+    color: white;
+}
+
+Pocket#player {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #FF9999, stop: 1 #FF3333
+    );
+}
+
+Pocket#computer {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #B3D9FF, stop: 1 #0080FF
+    );
+}
+
+Store {
+    width: 50;
+    height: 250;
+    border-radius: 30;
+}
+
+StatsDialog QLabel {
+    qproperty-alignment: AlignCenter;
+}
+
+SettingsDialog QCheckBox {
+    padding-right: 50;
+}
+
+QTabWidget QTextEdit {
+    border: 0;
+}
+
+QTabWidget QPushButton {
+    border: 5 solid transparent;
+}
