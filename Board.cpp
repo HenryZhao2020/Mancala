@@ -65,10 +65,9 @@ void Board::movePlayer(int start) {
 
         start = 0;
         end -= 13;
-    } while (end >= 0);
+    } while (end > 0);
 
-    i--;
-    if (i < 7 && Attr::amounts[i] == 1 && Attr::amounts[14 - i] > 0) {
+    if (--i < 7 && Attr::amounts[i] == 1 && Attr::amounts[14 - i] > 0) {
         Attr::amounts[7] += Attr::amounts[14 - i] + 1;
         Attr::amounts[i] = 0;
         Attr::amounts[14 - i] = 0;
@@ -125,13 +124,9 @@ void Board::moveComputer() {
 
         start = -1;
         end -= 14;
-    } while (end >= 0);
+    } while (end > 0);
 
-    if (--i == -1) {
-        i = 13;
-    }
-
-    if (i > 7 && Attr::amounts[i] == 1 && Attr::amounts[14 - i] > 0) {
+    if (--i > 7 && Attr::amounts[i] == 1 && Attr::amounts[14 - i] > 0) {
         Attr::amounts[0] += Attr::amounts[14 - i] + 1;
         Attr::amounts[i] = 0;
         Attr::amounts[14 - i] = 0;
@@ -188,12 +183,9 @@ int Board::nextComputerIndex() {
 
             start = -1;
             end -= 14;
-        } while (end >= 0);
+        } while (end > 0);
 
-        if (--i == -1) {
-            return 13;
-        }
-        return i;
+        return i - 1;
     };
 
     QList<int> indexes;
