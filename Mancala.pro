@@ -14,6 +14,8 @@ HEADERS += *.h
 
 TARGET = "Mancala"
 
+QMAKE_TARGET_DESCRIPTION = "Mancala"
+
 RC_ICONS = "Logo.ico"
 
 PRECOMPILED_HEADER = PCH.h
