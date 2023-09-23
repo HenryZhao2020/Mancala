@@ -1,5 +1,4 @@
-#ifndef BOARD_H
-#define BOARD_H
+#pragma once
 
 #include "PCH.h"
 
@@ -29,5 +28,3 @@ private:
     bool isComputerEnded();
     void makeEnded();
 };
-
-#endif

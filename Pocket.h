@@ -1,5 +1,4 @@
-#ifndef POCKET_H
-#define POCKET_H
+#pragma once
 
 #include "PCH.h"
 
@@ -12,9 +11,8 @@ public:
     void setAmount(int amount);    
 
 private:
-    int increment = 1;
+    int fontSize;
+    int increment;
 
-    void zoom(int fontSize = 24);
+    void zoom();
 };
-
-#endif

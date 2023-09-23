@@ -9,18 +9,24 @@ void Pocket::setAmount(int amount) {
     }
 }
 
-void Pocket::zoom(int fontSize) {
-    if (fontSize < 24) {
-        increment = 1;
-        return;
-    }
+void Pocket::zoom() {
+    fontSize = 24;
+    increment = 1;
 
-    if (fontSize > 48) {
-        increment = -1;
-    }
+    auto timer = new QTimer(this);
+    timer->setInterval(6);
+    connect(timer, &QTimer::timeout, this, [this, timer] {
+        if (fontSize < 24) {
+            timer->deleteLater();
+            return;
+        }
 
-    setStyleSheet("font-size: " + QString::number(fontSize) + "px");
-    QTimer::singleShot(6, this, [this, fontSize] {
-        zoom(fontSize + increment);
+        if (fontSize > 48) {
+            increment = -1;
+        }
+
+        fontSize += increment;
+        setStyleSheet("font-size: " + QString::number(fontSize) + "px");
     });
+    timer->start();
 }

@@ -1,5 +1,4 @@
-#ifndef GAME_H
-#define GAME_H
+#pragma once
 
 #include "PCH.h"
 
@@ -22,5 +21,3 @@ private:
     GameBar *bar;
     Board *board;
 };
-
-#endif

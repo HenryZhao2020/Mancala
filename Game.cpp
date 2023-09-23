@@ -12,7 +12,9 @@ Game::Game() : QMainWindow(nullptr, Qt::MSWindowsFixedSizeDialogHint) {
     vboxLayout->setContentsMargins(30, 30, 30, 30);
 
     bar = new GameBar(this);
-    bar->setHintPixmap(Pixmap::get("Bulb.png"));
+    bar->setHintVisible(Attr::hintVisible);
+    bar->setHintIcon(getIcon("Bulb.svg"));
+    bar->setHintText("Click a red pocket at the bottom to begin...");
     bar->setRestartButtonVisible(false);
     vboxLayout->addWidget(bar);
 
@@ -32,7 +34,7 @@ void Game::restart() {
     Attr::amounts = {0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4};
     Attr::ended = false;
 
-    bar->setHintPixmap(Pixmap::get("Bulb.png"));
+    bar->setHintIcon(getIcon("Bulb.svg"));
     bar->setRestartButtonVisible(false);
 
     vboxLayout->removeWidget(board);
@@ -54,8 +56,6 @@ void Game::restart() {
 
 void Game::restore() {
     if (!Attr::load()) {
-        bar->setHintText("Click a red pocket at the bottom to begin...");
-        bar->setHintVisible(Attr::hintVisible);
         return;
     }
 

@@ -1,5 +1,4 @@
-#ifndef STORE_H
-#define STORE_H
+#pragma once
 
 #include "PCH.h"
 #include "Pocket.h"
@@ -10,5 +9,3 @@ class Store : public Pocket {
 public:
     using Pocket::Pocket;
 };
-
-#endif

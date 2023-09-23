@@ -1,5 +1,4 @@
-#ifndef DIALOG_H
-#define DIALOG_H
+#pragma once
 
 #include "PCH.h"
 
@@ -9,9 +8,9 @@ class Dialog : public QDialog {
     Q_OBJECT
 
 public:
-    Dialog(Game *game, const QPixmap &pixmap, const QString &title);
+    Dialog(Game *game, const QIcon &icon, const QString &title);
 
-    void close();
+    void keyPressEvent(QKeyEvent *event);
 
 protected:
     Game *game;
@@ -57,5 +56,3 @@ private:
 
     QTextEdit *newTextEdit(const QString &fileName);
 };
-
-#endif

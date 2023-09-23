@@ -1,23 +1,19 @@
-#ifndef ATTR_H
-#define ATTR_H
+#pragma once
 
 #include "PCH.h"
 
-class Attr {
-public:
-    static QList<int> amounts;
-    static bool ended;
+namespace Attr {
+    inline QList<int> amounts = {0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4};
+    inline bool ended;
 
-    static int numPlayed;
-    static int playerScore;
-    static int computerScore;
-    static int numTied;
+    inline int numPlayed;
+    inline int playerScore;
+    inline int computerScore;
+    inline int numTied;
 
-    static bool animated;
-    static bool hintVisible;
+    inline bool animated = true;
+    inline bool hintVisible = true;
 
-    static void save();
-    static bool load();
-};
-
-#endif
+    void save();
+    bool load();
+}

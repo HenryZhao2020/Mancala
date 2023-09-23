@@ -248,15 +248,15 @@ void Board::makeEnded() {
 
     if (Attr::amounts[0] > Attr::amounts[7]) {
         Attr::computerScore++;
-        gameBar->setHintPixmap(Pixmap::get("Computer.png"));
+        gameBar->setHintIcon(getIcon("AI.svg"));
         gameBar->setHintText("Computer Won!");
     } else if (Attr::amounts[0] < Attr::amounts[7]) {
         Attr::playerScore++;
-        gameBar->setHintPixmap(Pixmap::get("Confetti.png"));
+        gameBar->setHintIcon(getIcon("Confetti.svg"));
         gameBar->setHintText("You Won!");
     } else {
         Attr::numTied++;
-        gameBar->setHintPixmap(Pixmap::get("Handshake.png"));
+        gameBar->setHintIcon(getIcon("Handshake.svg"));
         gameBar->setHintText("Tie!");
     }
 }

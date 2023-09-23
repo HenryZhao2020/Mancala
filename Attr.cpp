@@ -1,31 +1,20 @@
 #include "Attr.h"
 
-QList<int> Attr::amounts = {0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4};
-bool Attr::ended = false;
-
-int Attr::numPlayed = 0;
-int Attr::playerScore = 0;
-int Attr::computerScore = 0;
-int Attr::numTied = 0;
-
-bool Attr::animated = true;
-bool Attr::hintVisible = true;
-
 void Attr::save() {
     QFile file("Mancala_Data");
     file.open(QFile::WriteOnly);
 
-    QDataStream stream(&file);
-    stream << amounts;
-    stream << ended;
+    QDataStream out(&file);
+    out << amounts;
+    out << ended;
 
-    stream << numPlayed;
-    stream << playerScore;
-    stream << computerScore;
-    stream << numTied;
+    out << numPlayed;
+    out << playerScore;
+    out << computerScore;
+    out << numTied;
 
-    stream << animated;
-    stream << hintVisible;
+    out << animated;
+    out << hintVisible;
 
     file.close();
 }
@@ -36,17 +25,17 @@ bool Attr::load() {
         return false;
     }
 
-    QDataStream stream(&file);
-    stream >> amounts;
-    stream >> ended;
+    QDataStream in(&file);
+    in >> amounts;
+    in >> ended;
 
-    stream >> numPlayed;
-    stream >> playerScore;
-    stream >> computerScore;
-    stream >> numTied;
+    in >> numPlayed;
+    in >> playerScore;
+    in >> computerScore;
+    in >> numTied;
 
-    stream >> animated;
-    stream >> hintVisible;
+    in >> animated;
+    in >> hintVisible;
 
     file.close();
     return true;
