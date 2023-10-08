@@ -247,7 +247,7 @@ void Board::makeEnded() {
     updateAmounts();
 
     if (Attr::amounts[0] > Attr::amounts[7]) {
-        Attr::computerScore++;
+        Attr::cpuScore++;
         gameBar->setHintIcon(getIcon("AI.svg"));
         gameBar->setHintText("Computer Won!");
     } else if (Attr::amounts[0] < Attr::amounts[7]) {

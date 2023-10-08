@@ -11,7 +11,7 @@ void raiseWidget(QWidget *widget) {
     SetForegroundWindow(hwnd);
 }
 
-void receivedMessage(quint32 instanceId, QByteArray message) {
+void receivedMessage(quint32, QByteArray message) {
     if (message == "Raise") {
         raiseWidget(game);
     }
@@ -27,13 +27,12 @@ int main(int argc, char *argv[]) {
     }
 
     QDir::setCurrent(QApplication::applicationDirPath());    
-    QDir::setCurrent("Mancala_Files");
+    QDir::setCurrent("Res");
 
-    QFontDatabase::addApplicationFont("../Fonts/Ubuntu_Bold.ttf");
+    QFontDatabase::addApplicationFont("Ubuntu_Bold.ttf");
 
     app.setStyle("Fusion");
     app.setStyleSheet(File::readAll("Styles.qss"));
-
     QObject::connect(&app, &QApplication::aboutToQuit, &app, &Attr::save);
     QObject::connect(&app, &SingleApplication::receivedMessage,
                      &app, &receivedMessage);

@@ -25,5 +25,6 @@ private:
     QLabel *hintLabel;
     QPushButton *restartButton;    
 
-    QPushButton *newButton(const QIcon &icon, const QString &tip);
+    QPushButton *newButton(const QIcon &icon, const QString &tip, 
+                           std::function<void ()> lambda);
 };

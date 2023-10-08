@@ -49,7 +49,7 @@ StatsDialog::StatsDialog(Game *game)
 
     addRow("You:", Attr::playerScore);
     addRow("Tie:", Attr::numTied);
-    addRow("Computer:", Attr::computerScore);
+    addRow("Computer:", Attr::cpuScore);
 
     auto resetButton = new QPushButton("Reset", this);
     connect(resetButton, &QPushButton::clicked, this, &StatsDialog::reset);
@@ -63,7 +63,7 @@ void StatsDialog::addRow(const QString &labelText, int value) {
 void StatsDialog::reset() {
     Attr::playerScore = 0;
     Attr::numTied = 0;
-    Attr::computerScore = 0;
+    Attr::cpuScore = 0;
 
     close();
 }

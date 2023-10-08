@@ -8,7 +8,7 @@ CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 TARGET = "Mancala"
 
@@ -16,30 +16,11 @@ QMAKE_TARGET_DESCRIPTION = "Mancala"
 
 RC_ICONS = "Logo.ico"
 
-VERSION = 1.2.0
+VERSION = 1.2.1
 
-SOURCES += \
-    Attr.cpp \
-    Board.cpp \
-    Dialog.cpp \
-    File.cpp \
-    Game.cpp \
-    GameBar.cpp \
-    Icon.cpp \
-    Main.cpp \
-    Pocket.cpp \
-    Store.cpp
+SOURCES += *.cpp
 
-HEADERS += \
-    Attr.h \
-    Board.h \
-    Dialog.h \
-    File.h \
-    Game.h \
-    GameBar.h \
-    Icon.h \
-    Pocket.h \
-    Store.h
+HEADERS += *.h
 
 PRECOMPILED_HEADER = PCH.h
 
