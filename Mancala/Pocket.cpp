@@ -14,7 +14,6 @@ void Pocket::zoom() {
     increment = 1;
 
     auto timer = new QTimer(this);
-    timer->setInterval(6);
     connect(timer, &QTimer::timeout, this, [this, timer] {
         if (fontSize < 24) {
             timer->deleteLater();
@@ -28,5 +27,5 @@ void Pocket::zoom() {
         fontSize += increment;
         setStyleSheet("font-size: " + QString::number(fontSize) + "px");
     });
-    timer->start();
+    timer->start(6);
 }
