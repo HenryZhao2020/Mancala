@@ -1,5 +1,8 @@
 # Mancala
+
 An ancient board game that you can enjoy playing against your friends or my computer AI!
+
+Download Latest Version: https://github.com/HenryZhao2020/Mancala/releases/download/v2.0.0/Mancala-v2.0.0.zip
 
 
 # Preview
