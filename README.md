@@ -2,8 +2,6 @@
 
 An ancient board game that you can enjoy playing against your friends or my computer AI!
 
-Download Latest Version: https://github.com/HenryZhao2020/Mancala/releases/download/v2.0.0/Mancala-v2.0.0.zip
-
 
 # Preview
 
@@ -34,7 +32,7 @@ Tie:
 
 Settings Dialog:
 
-![image](https://github.com/HenryZhao2020/Mancala/assets/75873192/60fb52c1-f2bf-47cf-a3a8-15bc4670de7c)
+![image](https://github.com/HenryZhao2020/Mancala/assets/75873192/7f45960a-5065-4607-8d82-fd4093122211)
 
 
 Statistics Dialog:
@@ -44,4 +42,6 @@ Statistics Dialog:
 
 Help Dialog:
 
-![image](https://github.com/HenryZhao2020/Mancala/assets/75873192/b8d8fb23-29aa-49e1-a1da-99cfc986e0fd)
+![image](https://github.com/HenryZhao2020/Mancala/assets/75873192/223fd821-6cee-4dd9-b61b-9a6239192f5e)
+
+![image](https://github.com/HenryZhao2020/Mancala/assets/75873192/fd03f9b9-462d-4c2a-b326-69062ec8ea5f)
